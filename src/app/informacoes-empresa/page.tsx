@@ -1,10 +1,11 @@
+
 import FormulariosView from '@/Views/FormulariosView/FormulariosView'
-import SplashScreenView from '@/Views/SplashScreenView/SplashScreenView'
+import FormInformacoesEmpresa from '@/componentes/Forms/FormInformacoesEmpresa/FormInformacoesEmpresa'
 import React from 'react'
 
 const page = () => {
   return (
-    <div><SplashScreenView/></div>
+    <div><FormInformacoesEmpresa/></div>
   )
 }
 
