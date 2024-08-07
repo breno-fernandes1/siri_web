@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  
   overflow: hidden;
-  background-color: #ffffff; /* Ajuste conforme necessário */
+  background-color: #172E4D; /* Ajuste conforme necessário */
 }
 
 .pulsatingImage {
@@ -31,7 +30,7 @@
 }
 
 /* Ajustes de responsividade */
-@media (max-width: 768px) {
+@media (max-width: auto) {
   .splashContainer {
     height: 100vh;
     width: 100vw;

@@ -1,4 +1,3 @@
-// components/SplashScreen.tsx
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './SplashScreen.module.css';
@@ -7,8 +6,8 @@ const SplashScreen = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push('/informacoes-empresa');
-    }, 600);
+      router.push('/login');
+    }, 80);
 
     return () => clearTimeout(timer);
   }, [router]);
