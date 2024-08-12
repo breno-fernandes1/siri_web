@@ -1,33 +1,33 @@
 import * as React from 'react';
-import { Link,  Route, Routes, useLocation } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 
 function Content() {
-  const location = useLocation();
-  const query = new URLSearchParams(location.search);
-  const page = parseInt(query.get('page') || '1', 4);
   return (
-    <Pagination sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-      page={page}
+    <Pagination
+      sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       count={4}
-      renderItem={(item) => (
-        <PaginationItem
-          component={Link}
-          to={`/${item.page === 1 ? '' : `?page=${item.page}`}`}
-          {...item}
-        />
-      )}
+      renderItem={(item) => {
+        const page = item.page;
+        const route = `/dimensoes${page}`; // Gera a rota dinâmica para cada página
+
+        return (
+          <PaginationItem
+            component={Link}
+            to={route}
+            {...item}
+          />
+        );
+      }}
     />
   );
 }
 
 export default function PaginationLink() {
   return (
-
     <Routes>
       <Route path="*" element={<Content />} />
     </Routes>
-
   );
 }
